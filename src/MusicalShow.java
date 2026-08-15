@@ -1,6 +1,6 @@
 public abstract class MusicalShow extends Show {
-    protected String musicAuthor; // автор музыки
-    protected String librettoText; // текст либретто
+    private final String musicAuthor; // автор музыки
+    private final String librettoText; // текст либретто
 
     public MusicalShow(String title, int duration, Director director,
                        String musicAuthor, String librettoText) {
@@ -19,9 +19,9 @@ public abstract class MusicalShow extends Show {
 
     // Метод для печати либретто
     public void printLibretto() {
-        System.out.println("--- Либретто спектакля \"" + title + "\" ---");
+        System.out.println("--- Либретто спектакля \"" + getTitle() + "\" ---");
         System.out.println(librettoText);
-        System.out.println("----------------------------------------------\n");
+        System.out.println("---------------------------------------------\n");
     }
 
     @Override
